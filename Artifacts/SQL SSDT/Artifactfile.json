@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "SSMS",
+    "title": "SSDT",
     "description": "Installs Sql server management studio using the Chocolatey package manager",
     "tags": [
         "Windows",
@@ -9,6 +9,6 @@
     "iconUri": "https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt",
     "targetOsType": "Windows",
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./rawssdt.ps1 -PackageList ', 'sql-server-data-tools', '\"')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./ssdtchoc.ps1 -PackageList ', 'sql-server-data-tools', '\"')]"
     }
 }
