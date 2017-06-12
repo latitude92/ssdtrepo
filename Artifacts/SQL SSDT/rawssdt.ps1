@@ -30,7 +30,7 @@ Param(
     # comma or semicolon separated list of chocolatey packages.
     [ValidateNotNullOrEmpty()]
     [string]
-    $RawPackagesList = "ssdt15"
+    $RawPackagesList = "ssdtbi.vs2012"
 )
 
 ##################################################################################################
