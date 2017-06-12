@@ -30,7 +30,7 @@ Param(
     # comma or semicolon separated list of chocolatey packages.
     [ValidateNotNullOrEmpty()]
     [string]
-    $RawPackagesList = "sql-server-management-studio"
+    $RawPackagesList = "choco install ssdt15 "
 )
 
 ##################################################################################################
@@ -215,11 +215,11 @@ function InstallPackages
         {
             WriteLog 'The recent package changes indicate a reboot is necessary. Please reboot at your earliest convenience.'
         }
-        elseif (-not $succeeded)
-        {
-            $errMsg = 'Installation failed. Please see the chocolatey logs in %ALLUSERSPROFILE%\chocolatey\logs folder for details.'
-            throw $errMsg 
-        }
+        #elseif (-not $succeeded)
+        #{
+          #  $errMsg = 'Installation failed. Please see the chocolatey logs in %ALLUSERSPROFILE%\chocolatey\logs folder for details.'
+           # throw $errMsg 
+        #}
 
         WriteLog 'Success.'
     }
